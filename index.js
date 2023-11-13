@@ -38,7 +38,7 @@ require('./routes/product.route')(app);
 const server = require('http').createServer(app);
   const io = require('socket.io')(server, {
     cors: {
-      origin: ['http://localhost:5173','http://localhost:5174','http://localhost:5176','http://localhost:5175','http://localhost:3000','http://localhost:3001','http://localhost:3002', 'http://localhost:3003'],
+      origin: [process.env.BASE_URL],
       //methods: ['GET', 'POST']
     }
   })
